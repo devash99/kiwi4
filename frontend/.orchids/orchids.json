@@ -1,0 +1,7 @@
+{
+  "startupCommands": [
+    "npm install; npx vite --host 0.0.0.0 --port 5173"
+  ],
+  "projectId": "668fe412-1b35-41a2-b2fd-9becf307d89d",
+  "templateId": "nextjs"
+}
