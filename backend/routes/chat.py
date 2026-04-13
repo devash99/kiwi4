@@ -8,6 +8,7 @@ POST /api/v1/chat       → Ask a question
 POST /api/v1/chat/reset → Clear conversation memory
 """
 
+import json
 import time
 from flask import Blueprint, request
 
@@ -87,6 +88,9 @@ def chat():
     except Exception as e:
         log.error(f"[CHAT] Unexpected database error: {e}")
         return server_error("Unexpected database error.")
+
+    # Ensure rows are JSON-safe (handles datetime, Decimal, UUID, etc.)
+    rows = json.loads(json.dumps(rows, default=str))
 
     # ── FIX #5: Generate human-friendly answer ────────────────
     answer = groq_service.generate_answer(question, sql, rows, len(rows))

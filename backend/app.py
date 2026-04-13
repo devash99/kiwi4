@@ -109,6 +109,7 @@ def create_app() -> Flask:
     log.info("=" * 52)
     log.info("  VNR VJIET Campus AI — Backend Started")
     log.info(f"  Environment : {settings.FLASK_ENV}")
+    log.info(f"  API key set : {'OK' if settings.APP_API_KEY else 'NOT SET'}")
     log.info(f"  Supabase    : {'OK' if settings.SUPABASE_URL else 'NOT SET'}")
     log.info(f"  Groq AI     : {'OK' if settings.GROQ_API_KEY else 'NOT SET'}")
     log.info(f"  Model       : {settings.GROQ_MODEL}")

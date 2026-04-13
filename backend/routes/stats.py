@@ -55,7 +55,7 @@ def get_stats():
             "total_students": "—",
             "avg_attendance": "—",
             "total_subjects": "—",
-            "current_semester": "—",
+            "semester": "—",
             "department": "ECE Department",
             "institution": "VNR VJIET",
         })

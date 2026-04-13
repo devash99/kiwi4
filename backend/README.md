@@ -56,8 +56,11 @@ Open it and confirm everything looks correct.
 
 ### 3. Run in development
 ```powershell
+cd C:\vnr-ece\backend
 C:\Users\devas\AppData\Local\Programs\Python\Python312\python.exe app.py
 ```
+
+Important: start the backend from the `backend/` working directory so `.env` resolution is consistent.
 
 ### 4. Test the backend
 Open browser: `http://localhost:5000/api/v1/health`
@@ -82,7 +85,7 @@ Expected response:
 ### Authentication
 Every protected endpoint requires this header:
 ```
-X-API-Key: vnr-campus-ai-secret-2026
+X-API-Key: <value of APP_API_KEY from backend/.env>
 ```
 
 ---
